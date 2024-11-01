@@ -8,6 +8,7 @@ int main()
     int array_c[2][2];
     size_t i;
     size_t j;
+    size_t k;
 
     for (i = 0; i < sizeof(array_a)/sizeof(array_a[0]); i++)
     {
@@ -28,7 +29,12 @@ int main()
     {
         for (j = 0; j < sizeof(array_c[0])/sizeof(array_c[0][0]); j++)
         {
-            array_c[i][j] = array_a[i][j] * array_b[i][j] + array_a[i][j + 1] * array_b[i][j + 1];
+            array_c[i][j] = 0;
+            for (k = 0; k < sizeof(array_c[0])/sizeof(array_c[0][0]); k++)
+            {
+                array_c[i][j] += array_a[i][k] * array_b[k][j];
+
+            }
         }
     }
     
