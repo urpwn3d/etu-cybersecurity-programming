@@ -2,15 +2,16 @@
 #include <stdlib.h>
 #include <stddef.h>
 
-#define M 2
-#define N 2
-
 int main() 
 {
     size_t i, j;
     int* a;
     int** b;
     int flag = 0;
+    size_t M, N;
+
+    scanf("%zu%zu", &M, &N);
+    printf("\n");
 
     a = malloc(M * sizeof(a[0]));
     if (a == NULL) 
@@ -84,3 +85,4 @@ int main()
 
     return 0;
 }
+
