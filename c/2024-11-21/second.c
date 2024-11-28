@@ -14,10 +14,10 @@ int Division(int divisible, int divider, int* quotient)
 int main()
 {
     int quotient;
-    int Result;
-    Result = Division(125, 5, &quotient);
+    int returned_value;
+    returned_value = Division(125, 5, &quotient);
     
-    if (Result == 0)
+    if (returned_value == 0)
     {
         printf("%d\n", quotient);
     }
