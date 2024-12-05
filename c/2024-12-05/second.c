@@ -59,15 +59,14 @@ int main()
                 scanf("%d", &array[i][j]);
             }
         }
-
         int Result = OutMatrix(array, M, N);
+        for (i = 0; i < M; i++) free(array[i]);
+        free(array);
         if (Result != 0)
         {
             printf("Error!\n");
             return 1;
         }
-        for (i = 0; i < M; i++) free(array[i]);
-        free(array);
         return 0;
     }
 }
