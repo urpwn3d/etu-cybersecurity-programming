@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stddef.h>
 
+// the length of an array must be equal, at least, to 2 
 int main()
 {
     int array[1];
